@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Make the nav bar transparent */
+    display: flex;
+    justify-content: space-between; /* Aligns logo and nav with space between */
+    align-items: center; /* Centers items vertically */
+    padding: 0 10px; /* Reduced padding to decrease the gap */
+    position: fixed; /* Fix the header position */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure the header is above other content */
+}
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Aligns logo and nav with space between */
+    align-items: center; /* Centers items vertically */
+    padding: 0 20px; /* Add padding as needed */
+}
+
+header .logo img {
+    max-height: 60px; /* Adjust the size of the logo if needed */
+    transition: transform 0.5s ease-in-out;
+    border-radius: 50%; /* Make the logo circular */
+}
+
+header .logo img:hover {
+    transform: rotate(360deg);
+}
+
+nav {
+    display: none; /* Initially hide the nav */
+    transition: opacity 0.5s ease-in-out;
+}
+
+nav.show-nav {
+    display: block;
+    opacity: 1;
+}
+
+header nav ul {
+    display: flex;
+    font-size: 22px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin-left: 20px; /* Space between the navigation items */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff8f8;
+    font-weight: bold;
+}
+
+/* Optional: Add more styles for hover effects if needed */
+header nav ul li a:hover {
+    color: #007bff; /* Change color on hover */
+}
+/* Carousel Styles */
+.carousel {
+    padding: 20px 20px;  /* Reduce padding for a smaller carousel */
+    background-color: #000000;
+    text-align: center;
+    max-width: 90%;  /* Reduce the overall width */
+    margin: 20px auto;  /* Center the carousel */
+}
+.carousel h1 {
+    font-size: 25px;
+}
+.carousel-container {
+    position: relative;
+    max-width: 70%;  /* Limit the maximum width of the carousel */
+    overflow: hidden;
+    margin: 0 auto;  /* Center the carousel images */
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    width: 100%;  /* Adjust the width of each image inside the carousel */
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 auto;  /* Center the images */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+h2 {
+    font-size: 55px;
+}
+/* Gallery Styles */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.grid img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+.grid img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    background: #333;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    margin-top: 20px;
+}
+/*********************************/
+/**********************************/
+/***language*****/
+.language-switch {
+    position: fixed;
+    top: 10px;
+    right: 60px; 
+    z-index: 1000; 
+    scale: 0.8;
+}
+
+.language-switch a {
+    display: inline-block;
+    padding: 4px 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #c2b8b8, #f06b1f); 
+    color: black;
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.language-switch a:hover {
+    background-color: gold;
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s 
+}
